@@ -19,7 +19,7 @@ RUN \
 	git checkout n7.0
 
 RUN \
-	./configure --prefix=.. && \
+	./configure --prefix=.. --enable-openssl && \
 	make && \
 	make install
 
