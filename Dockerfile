@@ -9,6 +9,7 @@ RUN apt-get update && \
     libavformat-dev \
     libswresample-dev \
     libavutil-dev \
+    libpng-dev \
     libswscale-dev && \
     rm -rf /var/lib/apt/lists/*
 
