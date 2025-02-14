@@ -9,6 +9,7 @@ RUN apt-get install -y \
 	yasm \
 	libssl-dev \
 	libpng-dev \
+	libx264-dev \
 	&& \
 	rm -rf /var/lib/apt/lists/*
 
