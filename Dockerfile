@@ -27,4 +27,6 @@ ENV CGO_LDFLAGS=-L/opt/ffmpeg/lib/
 ENV CGO_CFLAGS=-I/opt/ffmpeg/include/
 ENV PKG_CONFIG_PATH=/opt/ffmpeg/lib/pkgconfig
 
+RUN rm -rf /opt/ffmpeg/src
+
 CMD [ "ffmpeg", "-version" ]
