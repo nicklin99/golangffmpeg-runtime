@@ -7,8 +7,10 @@ RUN apt-get install -y \
 	git \
 	pkg-config \
 	yasm \
-	openssl \
-	libpng-dev
+	libssl-dev \
+	libpng-dev \
+	&& \
+	rm -rf /var/lib/apt/lists/*
 
 RUN \
 	mkdir -p /opt/ffmpeg/src
@@ -20,7 +22,12 @@ RUN \
 	git checkout n7.0
 
 RUN \
-	./configure --prefix=.. --enable-openssl && \
+	./configure --prefix=.. \
+	--enable-openssl \
+	--enable-libx264 \
+	--enable-gpl \
+	--enable-nonfree \
+	&& \
 	make && \
 	make install
 
