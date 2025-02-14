@@ -7,6 +7,7 @@ RUN apt-get install -y \
 	git \
 	pkg-config \
 	yasm \
+	openssl \
 	libpng-dev
 
 RUN \
